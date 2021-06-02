@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--    日志-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+
+
+<!--    改名typeALiases和设置setting-->
+<!--    这个包下的自己取别名，在写sql语句时可以使用books作为类型名-->
+    <typeAliases>
+        <package name="com.xxx.pojo"/>
+    </typeAliases>
+
+
+    <!--注册映射器-->
+    <mappers>
+        <mapper resource="com/xxx/dao/BookMapper.xml"/>
+    </mappers>
+
+</configuration>
